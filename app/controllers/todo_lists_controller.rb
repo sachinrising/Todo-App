@@ -4,13 +4,19 @@ class TodoListsController < ApplicationController
   # GET /todo_lists
   # GET /todo_lists.json
   def index
-    @todo_lists = TodoList.all
+    # @todo_lists = TodoList.all
+    @todo_lists = TodoList.page(params[:page]).per(3)
   end
 
   # GET /todo_lists/1
   # GET /todo_lists/1.json
   def show
+    if @todo_list
+      # @todo_items = @todo_list.todo_items.page(:page).per(3)
+      @todo_items = @todo_list.todo_items;
+    end
 
+    @todo_list
   end
 
   # GET /todo_lists/new

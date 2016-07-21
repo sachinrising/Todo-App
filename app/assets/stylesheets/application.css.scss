@@ -171,7 +171,7 @@ body {
 	font-size: 0.8em;
 	color: white;
 	a {
-		color: white;
+		// color: white;
 	}
 }
 
@@ -210,5 +210,21 @@ input[type="submit"] {
 		background: $dark;
 		color: white;
 	}
+}
+
+.paginate {
+  text-align: center;
+}
+
+.newTodoList {
+  outline: none;
+  border: none;
+  height: 40px;
+  width: 25%;
+  border-radius: 4px;
+  background: white;
+  color: #1F7972;
+  text-decoration: none;
+  padding: 1em;
 }
 ::-webkit-input-placeholder { color: $dark; }

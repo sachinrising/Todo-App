@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+(1..50).each do |i|
+  todo = TodoList.create!(title: "List :#{i}", description: "Description:#{i}")
+  (1..10).each do |i|
+    TodoItem.create!(content:"Content #{todo.id} : #{i}", todo_list_id: todo.id)
+  end
+end

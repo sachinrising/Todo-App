@@ -29,6 +29,7 @@ class TodoItemsController < ApplicationController
 
 	def set_todo_item
 		@todo_item = @todo_list.todo_items.find(params[:id])
+		@todo_item = @todo_item.page(params[:page]).per(5)
 	end
 
 	def todo_item_params
